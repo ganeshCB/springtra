@@ -16,7 +16,7 @@ public class CibilScoreController {
 @Autowired
 private CibilScoreService service;
 	
-	
+	// Getting the records
     @GetMapping(path = "/api/v1/scores")
 	public List<CibilScore> findAll(){
 		
