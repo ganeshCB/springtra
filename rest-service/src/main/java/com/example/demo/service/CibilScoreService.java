@@ -10,7 +10,6 @@ import com.example.demo.repo.CibilScoreRepository;
 
 @Service
 public class CibilScoreService {
-
 	@Autowired
 	private CibilScoreRepository repo;
 	
@@ -18,5 +17,15 @@ public class CibilScoreService {
 	public List<CibilScore> findAll(){
 		
 		return this.repo.findAll();
+	}
+	
+	public CibilScore save(CibilScore entity) {
+		
+		return this.repo.save(entity);
+	}
+	
+   public CibilScore findById(int id) {
+		
+		return this.repo.findById(id).get();
 	}
 }
