@@ -11,7 +11,12 @@ import com.example.demo.entity.TaxDetails;
 import com.example.demo.repo.CibilScoreRepository;
 import com.example.demo.repo.TaxDetailsRepository;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
+
 @SpringBootApplication
+
+@OpenAPIDefinition(info = @Info(title = "Loan Processing API"))
 public class RestServiceApplication {
 
 	public static void main(String[] args) {

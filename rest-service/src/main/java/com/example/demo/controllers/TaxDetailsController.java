@@ -21,6 +21,7 @@ public class TaxDetailsController {
 	@GetMapping(path = "/api/v1/taxdetails/{pan}")
  	public TaxDetails findById(@PathVariable("pan") String pan){
  		
- 		return this.repo.findById(pan).get();
+ 		
+;				return this.repo.findById(pan).get();
  	}
 }
