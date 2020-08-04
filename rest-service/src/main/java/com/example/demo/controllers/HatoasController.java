@@ -1,6 +1,5 @@
 package com.example.demo.controllers;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,11 +29,17 @@ public class HatoasController {
 		 
 		for(HateoasCibilScore eachScore : allScores) {
 		
-			int id = eachScore.getId();
-			String linkRef = "api/v2/scores/"+id;
-			Link link = WebMvcLinkBuilder.linkTo(HatoasController.class)
-					  .slash(linkRef).withSelfRel();
+//			int id = eachScore.getId();
+//			String linkRef = "api/v2/scores/"+id;
+//			Link link = WebMvcLinkBuilder.linkTo(HatoasController.class)
+//					  .slash(linkRef).withSelfRel();
 			
+			String pan = eachScore.getPanNumber();
+			
+			String linkRef = "api/v1/taxdetails/"+pan;
+			
+			Link link = WebMvcLinkBuilder.linkTo(TaxDetailsController.class)
+					 .slash(linkRef).withRel("search");
 			eachScore.add(link);
 		}
 		
