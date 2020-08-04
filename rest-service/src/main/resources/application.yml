@@ -14,3 +14,15 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: update
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:1010
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"    
