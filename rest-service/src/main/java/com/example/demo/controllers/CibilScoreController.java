@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entity.CibilScore;
 import com.example.demo.service.CibilScoreService;
 
-
 @RestController
 @CrossOrigin(origins = "*")
 public class CibilScoreController {
@@ -30,6 +29,7 @@ private CibilScoreService service;
     @GetMapping(path = "/api/v1/scores")
 	public List<CibilScore> findAll(){
 		
+    	
 		return this.service.findAll();
 	}
     
