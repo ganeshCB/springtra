@@ -28,4 +28,37 @@ public class CibilScoreService {
 		
 		return this.repo.findById(id).get();
 	}
+   
+   public CibilScore update(CibilScore entity) {
+		
+		return this.repo.save(entity);
+	}
+   
+   public CibilScore remove(CibilScore entity) {
+		
+	   CibilScore resp = null;
+	    
+	    if(repo.existsById(entity.getId())) {
+	       
+	       repo.delete(entity);
+	       
+	       resp= entity;
+	       } 
+	       
+	       return resp;
+
+	   
+		
+	}
+   
+   public void removeById(int id) {
+	   
+	   this.repo.deleteById(id);
+	   
+   }
+   
+   public CibilScore getByPanNumber(String panNumber) {
+	   
+	   return this.repo.findByPanNumber(panNumber);
+   }
 }

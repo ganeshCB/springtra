@@ -8,4 +8,5 @@ import com.example.demo.entity.CibilScore;
 @Repository
 public interface CibilScoreRepository extends JpaRepository<CibilScore, Integer> {
 
+	public CibilScore findByPanNumber(String panNumber);
 }
