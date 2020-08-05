@@ -15,7 +15,6 @@ import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
 
 @SpringBootApplication
-
 @OpenAPIDefinition(info = @Info(title = "Loan Processing API"))
 public class RestServiceApplication {
 
